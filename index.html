@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 4</title>
+  <script src="jquery-3.2.1.js"></script>
+</head>
+<body>
+  <form action="index.html" method="post">
+    <label>Votre nom : </label><input type="text" name="name" id="name"><br/>
+    <label>Votre prénom : </label><input type="text" name="firstname" id="firstname"><br/>
+    <label>Votre date de naissance : </label><input type="text" name="birthDate" id="birthDate"><br/>
+    <label>Votre lieu de naissance : </label><input type="text" name="birthPlace" id="birthPlace"><br/>
+    <label>L'emploi que vous occupez : </label><input type="text" name="job" id="job"><br/>
+    <label>La société où vous travaillez : </label><input type="text" name="jobPlace" id="jobPlace"><br/>
+    <button type="button" name="button" id="generate">Générer</button> <br/>
+    <p id="text"></p>
+  </form>
+  <script>
+  $(function() {
+    $('#generate').click(function(){
+      var name = $('#name').val();
+      var firstname = $('#firstname').val();
+      var birthDate = $('#birthDate').val();
+      var birthPlace = $('#birthPlace').val();
+      var job = $('#job').val();
+      var jobPlace = $('#jobPlace').val();
+      $('#text').text(name + ' ' + firstname + ', né(e) le ' + birthDate + ' à ' + birthPlace + ', actuellement ' + job + ' à ' + jobPlace + '.');
+    });
+  });
+  </script>
+</body>
+</html>
